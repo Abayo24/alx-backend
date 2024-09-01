@@ -4,10 +4,10 @@ Simple helper function
 """
 import csv
 import math
-from typing import Tuple, List
+from typing import List
 
 
-def index_range(page: int, page_size: int) -> Tuple:
+def index_range(page: int, page_size: int) -> tuple:
     """index_range function"""
     start_index = (page - 1) * (page_size)
     end_index = start_index + page_size
@@ -34,6 +34,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """gets the pages"""
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
 
