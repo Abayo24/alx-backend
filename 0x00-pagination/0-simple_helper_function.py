@@ -2,10 +2,9 @@
 """
 Simple helper function
 """
-from typing import Tuple
 
 
-def index_range(page: int, page_size: int) -> Tuple:
+def index_range(page: int, page_size: int) -> tuple:
     """index_range function"""
     start_index = (page - 1) * (page_size)
     end_index = start_index + page_size
