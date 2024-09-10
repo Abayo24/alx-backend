@@ -7,7 +7,7 @@ from base_caching import BaseCaching
 class LRUCache(BaseCaching):
     """caching system using LRU"""
 
-    def __init__():
+    def __init__(self):
         """initializes the class with base init"""
         super().__init__()
         self.lru = []
@@ -31,7 +31,7 @@ class LRUCache(BaseCaching):
     def get(self, key):
         """get an item from cache using the key"""
         if key is None or key not in self.cache_data:
-            return None
+            return
 
         self.lru.remove(key)
         self.lru.append(key)
