@@ -47,7 +47,7 @@ class LFUCache(BaseCaching):
 
     def get(self, key):
         """gets item by key using lfu"""
-        if key is None or item is None:
+        if key is None or key not in self.cache_data:
             return None
 
         self.count[key] += 1
